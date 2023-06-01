@@ -11,7 +11,7 @@
   .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #1da01a;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -51,11 +51,11 @@
 .button2 {
   background-color: white;
   color: black;
-  border: 2px solid #008CBA;
+  border: 2px solid #41b6ba;
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color: #41b6ba;
   color: white;
 }
 
@@ -66,18 +66,18 @@
 <br><br><br><br>
 
 <div class="container">
-  <div class="panel panel-primary">
+  <div class="panel panel-info">
     <div class="panel-heading">
-      <h6 style="text-align:center;" class="panel-title">My Cart</h6>
+      <h6 style="text-align:center;" class="panel-title">Mon Panier</h6>
     </div>
     <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Nom</th>
           <th>Image</th>
-          <th>Price</th>
+          <th>Prix</th>
           <th>Description</th>
-          <th>Remove From Cart</th>
+          <th>Supprimer du panier</th>
 
         </tr>
       </thead>
@@ -95,7 +95,7 @@
       </tr>
       {%else%}
       <br><br><br>
-      <h1>no products</h1>
+      <h1>pas de produits</h1>
       {% endif %}
       {% endfor %}
     </table>
@@ -104,7 +104,7 @@
 <br><br><br>
 <div style="text-align: center;">
   <button class="button button2">Total {{total}}</button>
-  <a href="/customer-address"><button class="button" ><span>Purchase </span></button></a>
+  <a href="/customer-address"><button class="button" ><span>Payer </span></button></a>
 </div>
 
 
