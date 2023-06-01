@@ -25,7 +25,7 @@ def connexion(request):
         print(mot_de_passe)
 
         # Vérifier les informations d'identification avec authenticate()
-        membre = authenticate(request, username="damien", password="damien")
+        membre = authenticate(request, username="nom_utilisateur", password="mot_de_passe")
         print(membre)
         if membre is not None:
             # Informations d'identification valides, connecter l'utilisateur
