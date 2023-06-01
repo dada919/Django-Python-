@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 from ecom.views import inscription
+from ecom.views import connexion
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +27,6 @@ urlpatterns = [
     path('inscription', TemplateView.as_view(template_name='inscription.html'), name='inscription'),
     path('panier', TemplateView.as_view(template_name='panier.html'), name='panier'),
     path('inscription/', inscription, name='inscription'),
+    path('connexion/', connexion, name='connexion'),
 ]
 
