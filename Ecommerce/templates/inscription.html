@@ -79,6 +79,10 @@
           display: block;
           margin-top: 12px;
         }
+
+        .submit {
+          background-color : #e3d2d2;
+        }
 </style>
 
 
@@ -92,7 +96,7 @@
 			<div class="login-form">
 				<div class="control-group">
                 {% csrf_token %}
-				<input type="text" class="login-field" value="" placeholder="Nom d'utilisateur" name="nom_utilisateur" id="login-name">
+				<input type="text" class="login-field" value="" placeholder="Nom d'utilisateur" name="nom" id="login-name">
 				<label class="login-field-icon fui-user" for="login-name"></label>
 				</div>
 
@@ -101,7 +105,7 @@
 				<label class="login-field-icon fui-lock" for="login-pass"></label>
 				</div>
 
-				<input type="submit" value="Inscription">
+				<input type="submit" class="submit" value="Inscription">
 				
                 </form>
                 {% if message_erreur %}

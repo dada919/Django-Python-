@@ -15,6 +15,8 @@ def inscription(request):
     return render(request, 'inscription.html')
 
 
+
+
 def connexion(request):
     if request.method == 'POST':
         nom_utilisateur = request.POST.get('nom')
