@@ -149,20 +149,15 @@ a.socialIcon:hover,
             <div class="card">
                 <form class="box" method="post">
                   {% csrf_token %}
-                    <h1>Customer Login</h1>
-                    <p class="text-muted"> Please enter your login and password!</p>
-                               {% render_field form.username class="form-control" placeholder="Username" %}
-                               {% render_field form.password class="form-control" placeholder="Password" %}
-                     <input type="submit" name="" value="Login" >
+                    <h1>Connexion</h1>
+                        {% render_field form.username class="form-control" placeholder="Nom" %}
+                        {% render_field form.password class="form-control" placeholder="Mot de passe" %}
+                     <input type="submit" name="" value="Connexion" >
 
                 </form>
             </div>
         </div>
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-{% include "ecom/footer.html" %}
   </body>
 </html>

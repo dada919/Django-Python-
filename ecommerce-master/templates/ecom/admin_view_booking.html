@@ -22,10 +22,7 @@
     }
   </style>
 </head>
-<!--
-written By : sumit kumar
-facebook : fb.com/sumit.luv
--->
+
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -44,7 +41,7 @@ facebook : fb.com/sumit.luv
           <th>Delete</th>
         </tr>
       </thead>
-      <!-- p for product, c for customer-->
+
       {% for product,customer,order in data %}
       <tr>
         {% for c in customer %}
@@ -69,9 +66,5 @@ facebook : fb.com/sumit.luv
     </table>
   </div>
 </div>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 {% endblock content %}
