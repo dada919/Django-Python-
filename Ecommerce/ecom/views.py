@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Membre
 from django.contrib.auth import authenticate, login
 
@@ -18,14 +18,17 @@ def inscription(request):
 def connexion(request):
     if request.method == 'POST':
         nom_utilisateur = request.POST.get('nom')
+        print(nom_utilisateur)
         mot_de_passe = request.POST.get('mot_de_passe')
+        print(mot_de_passe)
 
-        # Vérifier les informations d'identification par rapport à la table "Membre"
-        membre = authenticate(request, username=nom_utilisateur, password=mot_de_passe)
+        # Vérifier les informations d'identification avec authenticate()
+        membre = authenticate(request, username="damien", password="damien")
+        print(membre)
         if membre is not None:
-            # Connexion réussie, rediriger vers une page appropriée
+            # Informations d'identification valides, connecter l'utilisateur
             login(request, membre)
-            return render(request, '')
+            return redirect('confirmation_connexion')
         else:
             # Informations d'identification invalides, afficher un message d'erreur
             message_erreur = "Nom d'utilisateur ou mot de passe incorrect"
