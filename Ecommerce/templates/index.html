@@ -6,12 +6,12 @@
     </head>
     <body> 
         
-        {% block content %}
+    {% block content %}
 
         {% for product in products %}
             <h2>{{product.name}}</h2>
-            {% endfor %}
+        {% endfor %}
 
-        {% endblock %}
+    {% endblock %}
     </body>
 </html>

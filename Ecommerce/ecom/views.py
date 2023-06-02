@@ -24,15 +24,12 @@ def connexion(request):
         mot_de_passe = request.POST.get('mot_de_passe')
         print(mot_de_passe)
 
-        # Vérifier les informations d'identification avec authenticate()
         membre = authenticate(request, username="nom_utilisateur", password="mot_de_passe")
         print(membre)
         if membre is not None:
-            # Informations d'identification valides, connecter l'utilisateur
             login(request, membre)
             return redirect('confirmation_connexion')
         else:
-            # Informations d'identification invalides, afficher un message d'erreur
             message_erreur = "Nom d'utilisateur ou mot de passe incorrect"
             return render(request, 'connexion.html', {'message_erreur': message_erreur})
 
