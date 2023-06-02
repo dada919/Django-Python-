@@ -96,12 +96,12 @@
 			<div class="login-form">
 				<div class="control-group">
                 {% csrf_token %}
-				<input type="text" class="login-field" value="" placeholder="Nom d'utilisateur" name="nom" id="login-name">
+				<input type="text" class="login-field" value="" placeholder="Nom d'utilisateur" name="nom" id="login-name" required>
 				<label class="login-field-icon fui-user" for="login-name"></label>
 				</div>
 
 				<div class="control-group">
-				<input type="password" class="login-field" value="" placeholder="Mot de passe" name="mot_de_passe" id="login-pass">
+				<input type="password" class="login-field" value="" placeholder="Mot de passe" name="mot_de_passe" id="login-pass" required>
 				<label class="login-field-icon fui-lock" for="login-pass"></label>
 				</div>
 

@@ -1,2 +1,17 @@
 {% include "navbar.html" %}
-<p>Produit</p>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Boutique</title>
+    </head>
+    <body> 
+        
+        {% block content %}
+
+        {% for product in products %}
+            <h2>{{product.name}}</h2>
+            {% endfor %}
+
+        {% endblock %}
+    </body>
+</html>
